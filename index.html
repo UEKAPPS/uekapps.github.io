@@ -19,7 +19,7 @@ Ha Bu Arada Ne Arıyorsan Kodlamacımız Ufuk Enes KURT • www.instagram.com/ue
 <!--############################################################################################-->
 
 <!DOCTYPE html>
-<html lang="tr-TR">
+<html>
     
 <head>
         <meta charset="utf-8">
@@ -28,7 +28,7 @@ Ha Bu Arada Ne Arıyorsan Kodlamacımız Ufuk Enes KURT • www.instagram.com/ue
         <meta content="" name="keywords">
         <meta content="Ufuk Enes KURT Github web sitesidir, bilgi almak, yazılım işleri, kodlama, android, web tasarım" name="description">
         <meta name="author" content="UEKAPPS"/>
-        <meta name="copyright" content="2021" />
+        <meta name="copyright" content="2024" />
         <meta name="robots" content="index, follow">
 
         <!-- Favicon -->
@@ -48,19 +48,33 @@ Ha Bu Arada Ne Arıyorsan Kodlamacımız Ufuk Enes KURT • www.instagram.com/ue
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-     <h1>Merhaba, Hoş Geldiniz!</h1>
+    <body>
+	<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div>
+    <h1>Hello, I Have Retired!</h1>
+    <h1 id="countdown">5</h1>
+  </div>
+</div>
+
 
 <script>
-// Sayfa yüklendiğinde çalışacak fonksiyon
+// Function to run when the page is loaded
 window.onload = function() {
-  // 5 saniye sonra başka bir sayfaya yönlendirme yap
-  setTimeout(function(){
-    window.location.href = "https://uekapps.github.io/3d";
-  }, 5000);
+  var countdown = 5;
+  var countdownDisplay = document.getElementById('countdown');
+
+  var countdownInterval = setInterval(function() {
+    countdown--;
+    countdownDisplay.textContent = countdown;
+
+    if (countdown <= 0) {
+      clearInterval(countdownInterval);
+      window.location.href = "https://uekapps.github.io/3d";
+    }
+  }, 1000);
 };
 </script>
-
+	    
     </body>
 
 </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="follow,index" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SahteBank | Giriş Formu</title>
+
+  <meta name="description" content="🔐 CSS framework kullanmadan sıfırdan hazırlanmış açık kaynak giriş sayfası şablonu." />
+  <meta name="keywords" content="giriş sayfası css, giriş formu, login css, login template" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://mazipan.github.io/login-page-css/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://mazipan.github.io/login-page-css/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://mazipan.github.io/login-page-css/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="https://mazipan.github.io/login-page-css/manifest.json" />
+  <meta name="msapplication-TileColor" content="#007c89" />
+  <meta name="theme-color" content="#007c89" />
+
+  <!-- Stil dosyaları -->
+  <link rel="stylesheet" href="https://mazipan.github.io/login-page-css/index.d7f9aa4c.css" />
+  <link rel="stylesheet" href="https://mazipan.github.io/login-page-css/index.c5385a13.css" />
+  <link rel="stylesheet" href="https://mazipan.github.io/login-page-css/05-mailchimp/index.abe83d30.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics (isteğe bağlı) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25065548-2"></script>
+  <script>
+    function a() {
+      dataLayer.push(arguments);
+    }
+    window.dataLayer = window.dataLayer || [];
+    a("js", new Date());
+    a("config", "UA-25065548-2");
+  </script>
+</head>
+<body>
+  <div class="content">
+    <div class="content-left">
+      <div class="form-wrapper">
+        <div class="logo">
+          <img src="https://mazipan.github.io/login-page-css/android-chrome-192x192.bee28d27.png" alt="Logo" />
+        </div>
+
+        <h1 class="text-title">Giriş Yap</h1>
+        <div>Hesabınız yok mu? <a href="#register">Hesap oluştur</a></div>
+
+        <div class="field-group">
+          <label class="label" for="txt-email">Kullanıcı Adı</label>
+          <input class="input" type="text" id="txt-email" name="email" />
+        </div>
+
+        <div class="field-group">
+          <div class="label-wrapper">
+            <label class="label" for="txt-password">Şifre</label>
+            <label class="label label--right" onclick="tooglePassword()">
+              <svg class="eye is--show label-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-off is--hide label-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+              <span class="label-text">Göster</span>
+            </label>
+          </div>
+          <input class="input" type="password" id="txt-password" name="password" />
+        </div>
+
+        <div class="field-group">
+          <input class="btn-submit" type="submit" value="Giriş Yap" />
+        </div>
+
+        <div class="field-group">
+          <label class="checkbox-label">
+            Beni hatırla
+            <input type="checkbox" />
+            <span class="checkbox-checkmark"></span>
+          </label>
+        </div>
+
+        <div class="field-group text-center">
+          <a href="#forgot-username">Kullanıcı adını mı unuttun?</a><span> · </span><a href="#forgot-password">Şifreni mi unuttun?</a>
+        </div>
+
+        <!-- Uyarı Bölümü -->
+        <section style="color:#000; background:#ffde05; border-radius:.5em; max-width:44rem; margin:1em auto 3em; padding:.5em">
+          <p><b>UYARI: BU SAYFA KİŞİSEL EĞİTİM PROJESİ OLARAK HAZIRLANMIŞTIR.</b></p>
+          <p style="margin-top:.5em">
+            Bu sayfa, burada kullanılan şirket ya da marka ile resmi olarak bağlantılı değildir. Sayfa yalnızca kişisel öğrenme ve geliştirme amacıyla oluşturulmuştur.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <div class="content-right">
+      <div class="content-right-text">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eos esse debitis consectetur dolor facilis molestiae, maiores itaque. Quod cupiditate accusamus ab. Repellat inventore sunt culpa possimus alias dignissimos adipisci.
+        </span>
+      </div>
+      <a class="link-custom-domain"> Daha fazla bilgi için tıklayın </a>
+    </div>
+  </div>
+
+  <!-- Alt Bilgi -->
+  <footer>
+    <a href="#"> Ana Sayfaya Dön </a>
+    <span class="author">
+      Sevgiyle hazırlandı ❤️  <a href="https://instagram.com/uekapps" rel="noopener noreferrer" target="_blank">Ufuk Enes KURT</a>, © 2025
+    </span>
+    <a href="https://github.com/uekapps" rel="noopener noreferrer" target="_blank"> GitHub Deposu </a>
+  </footer>
+
+  <!-- Şifre göster/gizle fonksiyonu -->
+  <script>
+    window.tooglePassword = function () {
+      var e = document.querySelector("#txt-password"),
+          t = document.querySelector(".label-text"),
+          s = document.querySelector(".eye"),
+          i = document.querySelector(".eye-off");
+      if (e.getAttribute("type") === "password") {
+        t.innerHTML = "Gizle";
+        e.setAttribute("type", "text");
+        s.classList.replace("is--show", "is--hide");
+        i.classList.replace("is--hide", "is--show");
+      } else {
+        t.innerHTML = "Göster";
+        e.setAttribute("type", "password");
+        i.classList.replace("is--show", "is--hide");
+        s.classList.replace("is--hide", "is--show");
+      }
+    };
+  </script>
+</body>
+</html>

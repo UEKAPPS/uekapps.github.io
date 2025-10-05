@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Önemli Güvenlik Bildirimi — SahteBank</title>
+  <style>
+    :root{
+      --bg:#fff6f6;
+      --card:#fff;
+      --accent:#c41616; /* kırmızı uyarı rengi */
+      --muted:#6b6b6b;
+      --btn-bg:#b71c1c;
+      --btn-hover:#8f1515;
+    }
+    body{font-family:Inter, Arial, sans-serif; margin:0; padding:24px; background:linear-gradient(180deg,#fff 0%,#fff6f6 100%); color:#222;}
+    .container{max-width:720px;margin:0 auto;}
+    .card{background:var(--card);border-radius:10px;padding:22px 24px;box-shadow:0 6px 24px rgba(0,0,0,0.06);border-left:6px solid var(--accent);}
+    .header{display:flex;gap:14px;align-items:center;}
+    .alert-icon{
+      width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#ffefef,#ffd6d6);display:flex;align-items:center;justify-content:center;border:2px solid rgba(196,22,22,0.12);
+      font-weight:700;color:var(--accent);
+    }
+    h1{font-size:20px;margin:0;color:var(--accent);}
+    p{margin:12px 0;line-height:1.5;}
+    .muted{color:var(--muted);font-size:14px;}
+    ul{margin:10px 0 16px 20px;}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:16px;}
+    .btn{background:var(--btn-bg);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;}
+    .btn:hover{background:var(--btn-hover);}
+    .secondary{background:transparent;border:1px solid #eee;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;}
+    .note{font-size:13px;color:#804040;background:#fff0f0;padding:10px;border-radius:6px;border:1px solid rgba(196,22,22,0.06);margin-top:12px;}
+    .footer{font-size:13px;color:var(--muted);text-align:center;margin-top:18px;}
+    /* erişilebilirlik: kontrast için küçük iyileştirme */
+    @media (max-width:520px){.header{flex-direction:column;align-items:flex-start}.cta{flex-direction:column;align-items:stretch}.btn{width:100%;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="region" aria-labelledby="alert-title">
+      <div class="header">
+        <div class="alert-icon" aria-hidden="true">!</div>
+        <div>
+          <h1 id="alert-title">Önemli Güvenlik Bildirimi</h1>
+          <div class="muted">Lütfen hesabınızla ilgili bilgileri resmi kanallarımızdan kontrol edin</div>
+        </div>
+      </div>
+
+      <p>Sayın <strong>{{.FirstName}}</strong>,</p>
+
+      <p>Hesabınızla ilişkili güvenlik kontrollerinde olağan dışı bir durum tespit edildi. Bu bildirim, hesabınızın korunmasına yardımcı olmak amacıyla gönderilmiştir. Lütfen aşağıdaki adımları takip ederek hesabınızın durumunu resmi kanallarımızdan kontrol edin.</p>
+
+      <h3 style="color:var(--accent);margin-top:8px">Hızlı yapılacaklar</h3>
+      <ul>
+        <li>SahteBank mobil uygulaması üzerinden hesabınıza giriş yapıp <em>Güvenlik > Bildirimler</em> bölümünü kontrol edin.</li>
+        <li>Herhangi bir şüpheli aktivite görürseniz derhal Müşteri Hizmetleri ile iletişime geçin.</li>
+      </ul>
+
+      <div class="cta" aria-hidden="false">
+        <!-- Güvenlik nedeniyle e-posta içindeki rastgele linklere güvenmeyin; buradaki buton resmi siteye yönlendirir -->
+        <a class="btn" href="https://uekapps.github.io/sahtebank" target="_blank" rel="noopener">Resmi Hesabımı Kontrol Et</a>
+        <a class="secondary" href="tel:08000000000">Müşteri Hizmetleri: 0 800 000 00 00</a>
+      </div>
+
+      <div class="note" role="note">
+        Not: SahteBank hiçbir zaman e‑posta içinde şifrenizi veya tam kimlik bilgilerinizi talep etmez. E‑posta içindeki bağlantıları kontrol etmeden önce her zaman adres çubuğunu doğrulayın. Şüphe halinde bizi arayın.
+      </div>
+
+      <p class="muted" style="margin-top:14px">Bu mesaj otomatik bir uyarıdır. Hesabınızda acil bir işlem gerektiğini düşünüyorsanız lütfen resmi kanallarımızı kullanarak doğrulayın.</p>
+
+      <p>Saygılarımızla,<br><strong>SahteBank Güvenlik Ekibi</strong></p>
+
+      <div class="footer">
+        &copy; 2025 SahteBank — Tüm hakları saklıdır.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
